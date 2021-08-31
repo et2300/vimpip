@@ -33,6 +33,8 @@ function get_linux_distro()
         echo "ManjaroLinux"
     elif grep -Eq "Gentoo" /etc/*-release; then
         echo "Gentoo"
+    elif grep -Eq "termux" /data/data/com.termux/files/etc/apt; then 
+        echo "termux"
     else
         echo "Unknow"
     fi
